@@ -5,12 +5,12 @@ on:
     branches:
     - master
     paths:
-      - "/pages/**"
+      - "pages/**"
   pull_request:
     branched:
     - master
     paths:
-      - "/pages/**"
+      - "pages/**"
 
 permissions:
   contents: write
