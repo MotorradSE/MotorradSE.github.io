@@ -4,9 +4,13 @@ on:
   push:
     branches:
     - master
+    paths:
+      - "/pages/**"
   pull_request:
     branched:
     - master
+    paths:
+      - "/pages/**"
 
 permissions:
   contents: write

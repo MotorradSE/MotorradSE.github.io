@@ -1,2 +1,4 @@
 /local/
-
+/.next/
+/node_modules/
+/out/
