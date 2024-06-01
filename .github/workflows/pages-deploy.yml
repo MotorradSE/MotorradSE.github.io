@@ -29,7 +29,7 @@ jobs:
         cache: npm
 
     - name: Install package from package.json
-      run: npm install --frozen-lockfile
+      run: npm install
 
     - name: Exec build
       run: npm run build
