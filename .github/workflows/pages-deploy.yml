@@ -1,0 +1,49 @@
+name: github pages deploy
+
+on:
+  push:
+    branches:
+    - master
+  pull_request:
+    branched:
+    - master
+
+permissions:
+  contents: write
+
+defaults:
+  run:
+    working-directory: ./pages
+
+jobs:
+  build:
+    runs-on: ubuntu-latest    
+    steps:
+    - name: Node.js enviroments deploy
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: npm
+
+    - name: Install package from package.json
+      run: npm install --frozen-lockfile
+
+    - name: Exec build
+      run: npm run build
+
+    - name: artifact upload
+      uses: actions/upload-pages-artifact@v1
+      with:
+        path: ./out
+
+  deploy:
+    needs: build
+    permissions:
+      id-token: write
+      pages: write
+    environment:
+      name: github-pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy github pages
+        uses: actions/deploy-pages@v2
