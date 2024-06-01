@@ -6,11 +6,13 @@ on:
     - master
     paths:
       - "pages/**"
+      - ".github/worklows/pages-deploy.yml"
   pull_request:
     branched:
     - master
     paths:
       - "pages/**"
+      - ".github/worklows/pages-deploy.yml"
 
 permissions:
   contents: write
