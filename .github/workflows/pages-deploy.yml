@@ -43,12 +43,12 @@ jobs:
       run: npm run docs:build
     
     - name: Add nojekyll
-      run: touch ./.vitepress/dist/.nojekyll
+      run: touch .vitepress/dist/.nojekyll
 
     - name: artifact upload
       uses: actions/upload-pages-artifact@v2
       with:
-        path: ./vitepress/dist
+        path: .vitepress/dist
 
   deploy:
     environment:
