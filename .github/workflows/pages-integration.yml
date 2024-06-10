@@ -1,4 +1,4 @@
-name: github pages deploy
+name: github pages integraton
 
 on:
   workflow_call:
@@ -6,6 +6,8 @@ on:
     paths-ignore:
       - 'knowledge/**'
       - '.gitignore'
+    branches-ignore:
+      - master
 
 permissions:
   contents: read
