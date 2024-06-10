@@ -1,0 +1,41 @@
+name: github pages deploy
+
+on:
+  workflow_call:
+  push:
+    paths-ignore:
+      - 'knowledge/**'
+      - '.gitignore'
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build vitepress static content
+    runs-on: ubuntu-latest    
+    steps:
+    - name: Checkout source code
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    - name: Node.js enviroments deploy
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: npm
+
+    - name: Install package from package.json
+      run: npm install
+
+    - name: Exec build
+      run: npm run docs:build
+    
+    - name: Add nojekyll
+      run: touch .vitepress/dist/.nojekyll
+
+    - name: artifact upload
+      uses: actions/upload-pages-artifact@v2
+      with:
+        path: .vitepress/dist
