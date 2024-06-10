@@ -2,3 +2,6 @@
 /.next/
 /node_modules/
 /out/
+/.vitepress/cache
+/.vitepress/dist
+/.gabage/

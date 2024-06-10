@@ -5,53 +5,57 @@ on:
     branches:
     - master
     paths:
-      - "pages/**"
+      - "index.md"
+      - ".vitepress/**"
       - ".github/workflows/pages-deploy.yml"
   pull_request:
     branched:
     - master
     paths:
-      - "pages/**"
+      - "index.md"
+      - ".vitepress/**"
       - ".github/workflows/pages-deploy.yml"
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build:
     runs-on: ubuntu-latest    
     steps:
     - name: Checkout source code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
 
     - name: Node.js enviroments deploy
       uses: actions/setup-node@v4
       with:
-        node-version: '20'
+        node-version: '18'
         cache: npm
 
     - name: Install package from package.json
       run: npm install
 
     - name: Exec build
-      run: npm run build
+      run: npm run docs:build
     
     - name: Add nojekyll
-      run: touch ./out/.nojekyll
+      run: touch .vitepress/dist/.nojekyll
 
     - name: artifact upload
-      uses: actions/upload-pages-artifact@v1
+      uses: actions/upload-pages-artifact@v2
       with:
-        path: ./out
+        path: .vitepress/dist
 
   deploy:
-    needs: build
-    permissions:
-      id-token: write
-      pages: write
     environment:
       name: github-pages
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Deploy github pages
+        id: deployment
         uses: actions/deploy-pages@v2

@@ -1,0 +1,176 @@
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local("Material Icons"),
+    local("MaterialIcons-Regular"),
+    url(/fonts/material-design-icons-4.0.0.woff2) format("woff2");
+}
+
+:root {
+  --background: #ecf8f9;
+  --primary: #068da9;
+  --dark: #7e1717;
+  --important: #e55807;
+}
+
+:root {
+  --vp-c-brand: var(--primary);
+  --vp-c-brand-light: #1facc9;
+  --vp-c-brand-lighter: #4ad6f5;
+  --vp-c-brand-lightest: #b3eaf6;
+  --vp-c-brand-dark: var(--dark);
+  --vp-c-brand-darker: #561a1a;
+  --vp-c-brand-dimm: rgba(100, 108, 255, 0.08);
+}
+
+/**
+ * Component: Button
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-button-brand-border: var(--vp-c-brand-light);
+  --vp-button-brand-text: var(--vp-c-white);
+  --vp-button-brand-bg: var(--vp-c-brand);
+  --vp-button-brand-hover-border: var(--vp-c-brand-light);
+  --vp-button-brand-hover-text: var(--vp-c-white);
+  --vp-button-brand-hover-bg: var(--vp-c-brand-light);
+  --vp-button-brand-active-border: var(--vp-c-brand-light);
+  --vp-button-brand-active-text: var(--vp-c-white);
+  --vp-button-brand-active-bg: var(--vp-button-brand-bg);
+}
+
+/**
+ * Component: Home
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(
+    120deg,
+    var(--primary) 30%,
+    var(--important)
+  );
+
+  --vp-home-hero-image-background-image: linear-gradient(
+    -45deg,
+    var(--important) 50%,
+    var(--primary) 50%
+  );
+  --vp-home-hero-image-filter: blur(40px);
+}
+
+@media (min-width: 640px) {
+  :root {
+    --vp-home-hero-image-filter: blur(56px);
+  }
+}
+
+@media (min-width: 960px) {
+  :root {
+    --vp-home-hero-image-filter: blur(72px);
+  }
+}
+
+/**
+ * Component: Custom Block
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-custom-block-tip-border: var(--vp-c-brand);
+  --vp-custom-block-tip-text: var(--vp-c-brand-darker);
+  --vp-custom-block-tip-bg: var(--vp-c-brand-dimm);
+}
+
+.dark {
+  --vp-custom-block-tip-border: var(--vp-c-brand);
+  --vp-custom-block-tip-text: var(--vp-c-brand-lightest);
+  --vp-custom-block-tip-bg: var(--vp-c-brand-dimm);
+}
+
+/**
+ * Component: Algolia
+ * -------------------------------------------------------------------------- */
+
+.DocSearch {
+  --docsearch-primary-color: var(--vp-c-brand) !important;
+}
+
+.vp-doc img {
+  border: 1px solid var(--vp-c-border);
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
+input, textarea {
+  background-color: var(--vp-input-bg-color);
+  border: 1px solid var(--vp-input-border-color);
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.4rem;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--vp-input-hover-border-color);
+}
+
+.primary-button {
+  color: var(--vp-button-brand-text);
+  background-color: var(--vp-button-brand-bg);
+  border: 1px solid var(--vp-button-brand-border);
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.4rem;
+}
+.primary-button:hover {
+  color: var(--vp-button-brand-hover-text);
+  background-color: var(--vp-button-brand-hover-bg);
+  border: 1px solid var(--vp-button-brand-hover-border);
+}
+.primary-button:active {
+  color: var(--vp-button-brand-active-text);
+  background-color: var(--vp-button-brand-active-bg);
+  border: 1px solid var(--vp-button-brand-active-border);
+}
+
+.alt-button {
+  color: var(--vp-button-alt-text);
+  background-color: var(--vp-button-alt-bg);
+  border: 1px solid var(--vp-button-alt-border);
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.4rem;
+}
+.alt-button:hover {
+  color: var(--vp-button-alt-hover-text);
+  background-color: var(--vp-button-alt-hover-bg);
+  border: 1px solid var(--vp-button-alt-hover-border);
+}
+.alt-button:active {
+  color: var(--vp-button-alt-active-text);
+  background-color: var(--vp-button-alt-active-bg);
+  border: 1px solid var(--vp-button-alt-active-border);
+}
