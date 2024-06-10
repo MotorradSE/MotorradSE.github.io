@@ -1,4 +1,4 @@
-name: github pages deploy
+name: github pages integraton
 
 on:
   workflow_call:
