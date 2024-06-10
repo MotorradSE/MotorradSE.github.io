@@ -3,23 +3,31 @@
 layout: home
 
 hero:
-  name: "My Awesome Project"
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  name: "MotorradSE"
+  text: "portfolio"
+  tagline: "No system no life."
+  image:
+    src: /images/default.png
+    style: "border-radius: 50%;"
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: "My history"
+      link: "./histories/"
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: "entries list"
+      link: "./entries.md"
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: My History
+    details: 現在までの経歴
+    link: "./histories/"
+  - title: Narita Nexus
+    details: "Narita Nexus Backetball team."
+    #link: "./narita-nexus/"
 ---
 
+<script lang="ts" setup> 
+import HomeEntry from ".vitepress/theme/components/HomeEntry.vue";
+</script>
+
+<HomeEntry />
