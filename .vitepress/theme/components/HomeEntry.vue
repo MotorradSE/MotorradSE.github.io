@@ -13,12 +13,12 @@ const entries = [...data].reverse().slice(0, 6);
       <a v-for="(entry, index) in entries" :key="index" :href="entry.url">
         <p class="article-title">{{ entry.frontmatter.title }}</p>
 
-        <p v-if="entry.frontmatter.icon" class="icon">
-          <img :src="entry.frontmatter.icon" />
+        <p v-if="entry.frontmatter.icon" class="icon" >
+          <img :src="entry.frontmatter.icon" width="150px" height="150px" />
         </p>
 
         <p v-else class="icon">
-          <img src="/icons/default.png" />
+          <img src="/icons/default.png" width="150px" height="150px" />
         </p>
 
         <p v-if="entry.frontmatter.date" class="date">
@@ -60,6 +60,7 @@ const entries = [...data].reverse().slice(0, 6);
       padding: 24px;
       height: 100%;
       border-radius: 4px;
+      align-items: center;
 
       &:hover {
         background-color: var(--vp-c-bg-soft-up);
@@ -77,7 +78,7 @@ const entries = [...data].reverse().slice(0, 6);
         //padding: 20px 0;
         height: auto;
         width: auto;
-        //display: flex;
+        display: flex;
         align-items: center;
         justify-content: center;
       }

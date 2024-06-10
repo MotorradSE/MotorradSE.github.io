@@ -40,13 +40,6 @@ const next = computed(() =>
   <VPDoc>
     <template #doc-before>
       <div class="entry-header">
-        <div v-if="banner" class="entry-banner">
-          <img :src="banner"  width="740px" height="360px" />
-        </div>
-        <div v-else class="entry-banner">
-          <img src="/banners/default.jpg"  width="740px" height="360px" />
-        </div>
-
         <div v-if="title || date" class="entry-title-date">
           <h1 v-if="title" class="entry-title">{{ title }}</h1>
           <div class="entry-date-container">
@@ -58,6 +51,12 @@ const next = computed(() =>
               <i class="material-icons">arrow_forward</i>
             </a>
           </div>
+        </div>
+        <div v-if="banner" class="entry-banner">
+          <img :src="banner"  width="740px" height="360px" />
+        </div>
+        <div v-else class="entry-banner">
+          <img src="/banners/default.jpg"  width="740px" height="360px" />
         </div>
       </div>
     </template>
