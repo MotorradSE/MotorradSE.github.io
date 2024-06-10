@@ -8,7 +8,13 @@ prev: false
 next: false
 ---
 
-# サイト開発中！
+![img](/banners/narita-nexus_tatakau-gunndann.png)
 
-ページ一覧を出す予定  
-今のところはサイドバーからアクセスしてくださいmm
+---
+
+# List
+<script setup>
+import Activities from '/.vitepress/theme/components/NexusActivities.vue';
+</script>
+
+<Activities />

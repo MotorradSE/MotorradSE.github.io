@@ -139,18 +139,6 @@ const next = computed(() =>
     justify-content: center;
   }
 
-  p.activity-icon {
-    //width: 100%;
-    ////width: 150px;
-    width: auto;
-    //height: 360px;
-    height: auto;
-    //object-fit: cover;
-    display: flex;
-    //display: block;
-    align-items: center;
-    justify-content: center;
-  }
   p.activity-banner {
     //width: 100%;
     ////width: 150px;
