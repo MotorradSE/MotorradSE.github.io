@@ -14,7 +14,7 @@ hero:
       text: "My history"
       link: "./histories/"
     - theme: alt
-      text: "entries list"
+      text: "Entries list"
       link: "./entries.md"
 
 features:
@@ -23,7 +23,7 @@ features:
     link: "./histories/"
   - title: Narita Nexus
     details: "Narita Nexus Backetball team."
-    #link: "./narita-nexus/"
+    link: "./narita-nexus/"
 ---
 
 <script lang="ts" setup> 
