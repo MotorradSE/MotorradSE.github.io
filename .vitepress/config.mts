@@ -23,7 +23,7 @@ export default defineConfig({
     nav: [
       { text: "Entries", link: "/entries" },
       { text: "Histories", link: "/histories" },
-      { text: "Narita Nexus", link: "" },
+      { text: "Narita Nexus", link: "/narita-nexus/" },
     ],
 
     sidebar: {
@@ -68,6 +68,24 @@ export default defineConfig({
         manualSortFileNameByPriority: ['guide', 'advanced-usage'],
         excludeFiles: ['changelog.md'],
         collapsed: true,
+        capitalizeFirst: true,
+        useTitleFromFileHeading: true,
+        useTitleFromFrontmatter: true,
+        //useFolderTitleFromIndexFile: true,
+        //useFolderLinkFromIndexFile: true,
+        frontmatterOrderDefaultValue: 9, // For 'CHANGELOG.md'
+        sortMenusByFrontmatterOrder: true
+        //rootGroupText: 'Contents',
+      }),
+
+      '/narita-nexus/': generateSidebar({
+        debugPrint: true,
+        documentRootPath: '/',
+        scanStartPath: "/narita-nexus/",
+        //resolvePath: "/narita-nexus/",
+        manualSortFileNameByPriority: ['guide', 'advanced-usage'],
+        excludeFiles: ['activities.md','overview.md'],
+        collapsed: false,
         capitalizeFirst: true,
         useTitleFromFileHeading: true,
         useTitleFromFrontmatter: true,
