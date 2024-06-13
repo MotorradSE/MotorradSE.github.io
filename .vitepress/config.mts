@@ -42,11 +42,47 @@ export default defineConfig({
       ],
       */
 
+      '/histories.md': generateSidebar({
+        debugPrint: true,
+        documentRootPath: '/',
+        scanStartPath: "/histories/",
+        //resolvePath: "/histories/",
+        manualSortFileNameByPriority: ['overview.md', 'job-carrer'],
+        excludeFiles: ['changelog.md'],
+        collapsed: true,
+        capitalizeFirst: true,
+        useTitleFromFileHeading: true,
+        useTitleFromFrontmatter: true,
+        //useFolderTitleFromIndexFile: true,
+        //useFolderLinkFromIndexFile: true,
+        frontmatterOrderDefaultValue: 9, // For 'CHANGELOG.md'
+        sortMenusByFrontmatterOrder: true
+        //rootGroupText: 'Contents',
+      }),
+
       '/histories/': generateSidebar({
         debugPrint: true,
         documentRootPath: '/',
         scanStartPath: "/histories/",
         //resolvePath: "/histories/",
+        manualSortFileNameByPriority: ['overview.md', 'job-carrer'],
+        excludeFiles: ['changelog.md'],
+        collapsed: true,
+        capitalizeFirst: true,
+        useTitleFromFileHeading: true,
+        useTitleFromFrontmatter: true,
+        //useFolderTitleFromIndexFile: true,
+        //useFolderLinkFromIndexFile: true,
+        frontmatterOrderDefaultValue: 9, // For 'CHANGELOG.md'
+        sortMenusByFrontmatterOrder: true
+        //rootGroupText: 'Contents',
+      }),
+
+      '/entries.md': generateSidebar({
+        debugPrint: true,
+        documentRootPath: '/',
+        scanStartPath: "/entries/",
+        //resolvePath: "/entries/",
         manualSortFileNameByPriority: ['guide', 'advanced-usage'],
         excludeFiles: ['changelog.md'],
         collapsed: true,

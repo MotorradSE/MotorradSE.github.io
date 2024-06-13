@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: "My history"
-      link: "./histories/"
+      link: "./histories.md"
     - theme: alt
       text: "Entries list"
       link: "./entries.md"
@@ -20,7 +20,7 @@ hero:
 features:
   - title: My History
     details: 現在までの経歴
-    link: "./histories/"
+    link: "./histories.md"
   - title: Narita Nexus
     details: "Narita Nexus Backetball team."
     link: "./narita-nexus/"
