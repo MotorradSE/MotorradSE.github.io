@@ -8,7 +8,7 @@ prev: false
 next: false
 ---
 
-# 予定表
+## 予定表
 
 |date|locale|activity|notice|
 |-|-|-|-|
