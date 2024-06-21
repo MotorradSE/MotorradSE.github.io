@@ -44,3 +44,22 @@ next: false
   - ロッカー
   - 温水シャワー
 
+<iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.2635136992135!2d139.7110593757894!3d35.71973727257477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d152eb52325%3A0x5c082a846e4c887b!2z6LGK5bO25Yy656uL6ZuR5Y-444GM6LC35L2T6IKy6aSo!5e0!3m2!1sja!2sjp!4v1718937727112!5m2!1sja!2sjp"
+  width="600"
+  height="450"
+  style="border:0"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade"
+  class="map_iframe"
+></iframe>
+
+<style>
+.map_iframe {
+    aspect-ratio: 16 / 9;
+    max-width: 1000px;
+    width: 100%;
+    height: auto;
+}
+</style>
