@@ -2,7 +2,7 @@
 layout: narita-nexus_activities
 title: "2024/06 活動予定"
 icon: /icons/narita-nexus.ico
-banner: /banners/narita-nexus_tatakau-gunndann.png
+banner: /images/2024-06-22_001.jpg
 date: 2024/06/16 19:00
 prev: false
 next: false
