@@ -5,6 +5,8 @@ import "./style.css";
 import Entry from "./Entry.vue";
 import History from "./History.vue";
 import NaritaNexus_Activity from "./NaritaNexus_Activity.vue";
+import { install } from 'element-plus';
+import 'element-plus/dist/index.css';
 
 export default {
   extends: Theme,
@@ -17,6 +19,7 @@ export default {
     app.component("entry", Entry);
     app.component("history", History);
     app.component("narita-nexus_activities", NaritaNexus_Activity);
+    install(app);
 
     if (globalThis && globalThis.gtag) {
       watch(router.route, () => {

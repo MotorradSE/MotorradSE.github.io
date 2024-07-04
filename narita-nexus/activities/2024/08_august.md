@@ -8,8 +8,58 @@ prev: false
 next: false
 ---
 
-# 予定表
+## 予定表
 
 |date|locale|activity|notice|
 |-|-|-|-|
-|MM/dd(week)<br>HH:MM ~ HH:MM|xxx体育館|ミニゲーム/練習|-|
+|8/25(土)<br>13:00 ~ 17:00|久住体育館|ミニゲーム/練習|-|
+
+8月は単日開催になります！  
+予定確保お願いします！
+
+## おしらせ バスケサークルのお誘い
+阿部が所属している企業のバスケサークルのお誘いになります。  
+私、砂田が毎回参加しております。  
+事前連絡は不要ですが、阿部に連絡してもらえればアテンドします。
+
+
+初心者や女性も参加しておりレベルは高くないです。  
+都内で適度な運動したい、バスケで新しいスキル試したいとかあれば参加してもらえればと思います。  
+私がガードやってるくらいなのでレベルは察してくださいmm  
+
+- 場所
+  - [雑司ヶ谷体育館](https://information.konamisportsclub.jp/trust/zoshigaya/access/)
+  - 副都心線雑司ヶ谷駅直結(池袋から1駅)
+- 日時
+  - 8/3(土) 18:00 ～ 21:00
+- 内容
+  - 5on5 ゲーム中心
+- 参加費
+  - 初回無料、2回目以降500円
+- 持ち物
+  - ウェア・シューズ
+  - ボール・リバーシは不要
+- 設備
+  - 自販機
+  - ロッカー
+  - 温水シャワー
+
+<iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.2635136992135!2d139.7110593757894!3d35.71973727257477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d152eb52325%3A0x5c082a846e4c887b!2z6LGK5bO25Yy656uL6ZuR5Y-444GM6LC35L2T6IKy6aSo!5e0!3m2!1sja!2sjp!4v1718937727112!5m2!1sja!2sjp"
+  width="600"
+  height="450"
+  style="border:0"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade"
+  class="map_iframe"
+></iframe>
+
+<style>
+.map_iframe {
+    aspect-ratio: 16 / 9;
+    max-width: 1000px;
+    width: 100%;
+    height: auto;
+}
+</style>

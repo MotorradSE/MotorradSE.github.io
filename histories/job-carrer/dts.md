@@ -7,7 +7,117 @@ date: 2024/06/13 22:00
 prev: false
 next: false
 ---
+<script setup>
+  import { ref } from 'vue';
+  import Timeline from'/.vitepress/theme/components/Timeline.vue';
 
+  const engineer_timelines = ref ([
+    {
+      timestamp: '2018/04/01',
+      is_card: false,
+      title: '入社',
+      contents:[
+        '新人研修受講',
+      ],
+      hide: false,
+      center: true,
+      placement: 'top', // 'top' | 'bottom'(default)
+      type: 'info', // 'primary' | 'success' | 'warning' | 'danger' | 'info'
+      //color: '#0bbd87',
+      size: 'large',
+      //icon: SuccessFilled,
+      hollow: false,
+    },
+    {
+      timestamp: '2018/09/01 ～ 2021/03',
+      is_card: true,
+      title: '[過去PJ] 一括請負インフラ受託開発',
+      contents:[
+        '主に扱った技術:ネットワーク, OS(Linux),セキュリティ',
+        '短期案件をフェーズが重複しないよう常に2～3件掛け持ちしていた'
+      ],
+      hide: false,
+      center: true,
+      placement: 'top', // 'top' | 'bottom'(default)
+      type: 'info', // 'primary' | 'success' | 'warning' | 'danger' | 'info'
+      //color: '#0bbd87',
+      size: 'large',
+      //icon: SuccessFilled,
+      hollow: false,
+    },
+    {
+      timestamp: '2019/07/01 ～',
+      is_card: false,
+      title: '研修講師',
+      contents:[
+        '新人研修講師を毎年担当',
+        'Network / IaC'
+      ],
+      hide: false,
+      center: true,
+      placement: 'top', // 'top' | 'bottom'(default)
+      type: 'info', // 'primary' | 'success' | 'warning' | 'danger' | 'info'
+      //color: '#0bbd87',
+      size: 'large',
+      //icon: SuccessFilled,
+      hollow: false,
+    },
+    {
+      timestamp: '2021/10',
+      is_card: true,
+      title: '[過去PJ] 証券会社A インフラコアシステム開発',
+      contents:[
+        'プロダクト:OpenStack, CiscoACI',
+        '顧客の主要サービスを載せるプライベートクラウドシステム開発',
+        'CI/CDも併せて開発',
+      ],
+      hide: false,
+      center: true,
+      placement: 'top', // 'top' | 'bottom'(default)
+      type: 'info', // 'primary' | 'success' | 'warning' | 'danger' | 'info'
+      //color: '#0bbd87',
+      size: 'large',
+      //icon: SuccessFilled,
+      hollow: false,
+    },
+    {
+      timestamp: '2022/04 ～',
+      is_card: true,
+      title: '[現在PJ] 証券会社A インフラシステムDevOps',
+      contents:[
+        '2021/10から携わっていたインフラシステム開発後、そのまま運用に参画する運びとなる',
+        '運用といってもRHOSHP + CiscoACI + CI/CD を用いたDevOpsなので維持のための運用ではなく、持続的な開発となる',
+      ],
+      hide: false,
+      center: true,
+      placement: 'top', // 'top' | 'bottom'(default)
+      type: 'success', // 'primary' | 'success' | 'warning' | 'danger' | 'info'
+      //color: '#0bbd87',
+      size: 'large',
+      //icon: SuccessFilled,
+      hollow: false,
+    },
+    {
+      timestamp: '2024/05 ～',
+      is_card: true,
+      title: '[現在PJ] 証券会社B インフラシステムDevOps',
+      contents:[
+        '証券会社Aの親会社のシステムSI(?)',
+        '顧客は内製志向なのでシステム課題の抽出と解決方法の提示をし、承認が得られたら顧客エンジニアに引き継ぐという業務',
+        'およそSIとはかけ離れている',
+      ],
+      hide: false,
+      center: true,
+      placement: 'top', // 'top' | 'bottom'(default)
+      type: 'success', // 'primary' | 'success' | 'warning' | 'danger' | 'info'
+      //color: '#0bbd87',
+      size: 'large',
+      //icon: SuccessFilled,
+      hollow: false,
+    },
+  ])
+</script>
+---
 # 株式会社DTS
 2018年入社 ~ 現在  
 インフラ領域を得意とする事業部に配属となり、ネットワークエンジニアとしてキャリアをスタート。  
@@ -52,6 +162,8 @@ next: false
   ネットワークシステムに関しては実運用も兼務してます。いわゆるプレイングマネージャー。
 
 ## エンジニアとして
+
+<Timeline :timelines="engineer_timelines"/>
 
 **2018/09 ～ 2021/03**
 
