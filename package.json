@@ -23,6 +23,7 @@
   "devDependencies": {
     "axios": "^1.7.2",
     "dayjs": "^1.11.11",
+    "element-plus": "^2.7.6",
     "query-string": "^9.0.0",
     "sass": "^1.77.4",
     "serve": "^14.2.3",
