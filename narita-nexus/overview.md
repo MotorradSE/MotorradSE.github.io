@@ -7,7 +7,30 @@ date: 2024/06/10 19:00
 prev: false
 next: false
 ---
+<script setup>
+import Carousel from '/.vitepress/theme/components/Carousel.vue';
+import { ref } from 'vue';
 
+const slide_carousels = ref ({
+  thumb: '/slides/nexus_top/slide_001.PNG',
+  list:[
+    '/slides/nexus_top/slide_001.PNG',
+    '/slides/nexus_top/slide_002.PNG',
+    '/slides/nexus_top/slide_003.PNG',
+    '/slides/nexus_top/slide_004.PNG',
+    '/slides/nexus_top/slide_005.PNG',
+    '/slides/nexus_top/slide_006.PNG',
+    '/slides/nexus_top/slide_007.PNG',
+    '/slides/nexus_top/slide_008.PNG',
+    '/slides/nexus_top/slide_009.PNG',
+    '/slides/nexus_top/slide_010.PNG',
+    '/slides/nexus_top/slide_011.PNG',
+    '/slides/nexus_top/slide_012.PNG',
+  ],
+})
+</script>
+
+---
 ![2024/03市民大会](/photos/nexus-top.jpg)
 
 # Narita Nexusについて
@@ -16,6 +39,10 @@ next: false
 私立成田高等学校 バスケットボール部OBがメインになります  
 
 2014年卒メンバーを中心に活動してます  
+
+Nexusメンバーおよび参加希望者は以下をご確認ください。  
+※クリックするとスライドが表示されます
+<Carousel :carousels="slide_carousels"/>
 
 ---
 # 要望について
