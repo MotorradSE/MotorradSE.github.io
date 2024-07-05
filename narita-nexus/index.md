@@ -24,6 +24,9 @@ features:
   - title: "Activity"
     details: "Narita Nexusの活動"
     link: "./activities/"
+  - title: "for new member"
+    details: "新規にNexusに参画する方へ"
+    link: "./docs/for_new_member/"
 ---
 
 <script lang="ts" setup> 
