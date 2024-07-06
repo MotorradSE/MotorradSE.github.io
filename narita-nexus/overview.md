@@ -23,9 +23,6 @@ const slide_carousels = ref ({
     '/slides/nexus_top/slide_007.PNG',
     '/slides/nexus_top/slide_008.PNG',
     '/slides/nexus_top/slide_009.PNG',
-    '/slides/nexus_top/slide_010.PNG',
-    '/slides/nexus_top/slide_011.PNG',
-    '/slides/nexus_top/slide_012.PNG',
   ],
 })
 </script>
