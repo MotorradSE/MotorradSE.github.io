@@ -46,4 +46,19 @@ const slide_carousels = ref ({
 <Carousel :carousels="slide_carousels"/>
 
 動画はこちら
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ja50W91ZR8Y?si=lnptXAzDberGmyA8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe 
+  src="https://www.youtube.com/embed/ja50W91ZR8Y?si=lnptXAzDberGmyA8"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+  class="youtube_iframe"
+></iframe>
+
+<style>
+  .youtube_iframe {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    height: auto;
+  }
+</style>
