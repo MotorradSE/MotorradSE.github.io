@@ -2,7 +2,7 @@ name: github pages integraton
 
 on:
   workflow_call:
-  push:
+  pull_request:
     paths-ignore:
       - 'knowledge/**'
       - '.gitignore'
@@ -21,6 +21,7 @@ jobs:
       uses: actions/checkout@v3
       with:
         fetch-depth: 0
+        ref: ${{ github.head_ref }}
 
     - name: Node.js enviroments deploy
       uses: actions/setup-node@v4
