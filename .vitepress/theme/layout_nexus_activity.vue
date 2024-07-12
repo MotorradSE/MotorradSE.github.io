@@ -21,6 +21,7 @@ const prev = computed(() =>
         link: activities[pageIndex.value + 1]?.url,
         icon: activities[pageIndex.value + 1]?.frontmatter?.icon ?? null,
         banner: activities[pageIndex.value + 1]?.frontmatter?.banner ?? null,
+        date: activities[pageIndex.value + 1]?.frontmatter?.date ?? null,
       },
 );
 // 古いのが「次」扱い
@@ -32,6 +33,7 @@ const next = computed(() =>
         link: activities[pageIndex.value - 1]?.url,
         icon: activities[pageIndex.value - 1]?.frontmatter?.icon ?? null,
         banner: activities[pageIndex.value - 1]?.frontmatter?.banner ?? null,
+        date: activities[pageIndex.value - 1]?.frontmatter?.date ?? null,
       },
 );
 </script>
@@ -88,13 +90,15 @@ const next = computed(() =>
               <img src="/images/icon.png" width="100px" height="100px" />
             </div>
             -->
-            {{ prev.text }}
+            <p>{{ prev.text }}</p>            
+            <p class="prev-date">{{ prev.date }}</p>
             </span>
         </a>
         <span v-if="!prev || !next" class="spacer" />
         <a v-if="next" :href="next.link" class="prev-next next">
           <span>
-            {{ next.text }}
+            <p>{{ next.text }}</p>          
+            <p class="prev-date">{{ next.date }}</p>
             <!--
             <div v-if="next.icon" class="prev-next img">
               <img :src="next.icon" width="50px" height="50px" />
@@ -210,6 +214,10 @@ const next = computed(() =>
     border-radius: 8px;
     padding: 1.4rem;
     height: 100%;
+
+    .prev-date{
+      font-size: 0.8rem;
+    }
 
     /*
     .img {

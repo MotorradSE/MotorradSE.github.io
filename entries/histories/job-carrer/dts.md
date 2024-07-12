@@ -7,6 +7,7 @@ date: 2024/06/13 22:00
 prev: false
 next: false
 is_card: false
+tags: ["転職"]
 ---
 <script lang="ts" setup> 
   import { ref } from 'vue';

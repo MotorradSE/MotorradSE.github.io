@@ -10,7 +10,7 @@ is_list: true
 ---
 
 <script lang="ts" setup> 
-import { data } from "/.vitepress/scripts/blog.data.ts";
+import { data } from "/.vitepress/scripts/entries_blog.data.ts";
 import list from '/.vitepress/theme/components/pages_list.vue';
 const entries_data = [...data].reverse();
 </script>

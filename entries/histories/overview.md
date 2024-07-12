@@ -7,6 +7,7 @@ date: 2024/06/10 19:00
 prev: false
 next: false
 is_list: false
+tags: ["転職"]
 ---
 
 <script lang="ts" setup> 

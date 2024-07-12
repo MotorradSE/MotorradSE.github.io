@@ -11,7 +11,7 @@ is_list: true
 
 
 <script lang="ts" setup> 
-import { data } from "/.vitepress/scripts/histories.data.ts";
+import { data } from "/.vitepress/scripts/entries_histories.data.ts";
 import List from '/.vitepress/theme/components/pages_list.vue';
 const histories_data = [...data].reverse();
 </script>
