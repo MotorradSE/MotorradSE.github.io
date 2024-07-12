@@ -7,6 +7,7 @@ date: 2024/07/11 10:00
 prev: false
 next: false
 is_list: false
+tags: ["VitePress"]
 ---
 
 # Change directory

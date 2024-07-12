@@ -2,7 +2,7 @@
 import { computed, ref } from "vue";
 import VPDoc from "vitepress/dist/client/theme-default/components/VPDoc.vue";
 import { useData, useRoute } from "vitepress";
-import { data as entries } from "../scripts/blog.data.ts";
+import { data as entries } from "../scripts/entries_blog.data.ts";
 const data = useData();
 const route = useRoute();
 const title = computed(() => data.frontmatter?.value?.title ?? null);

@@ -52,8 +52,8 @@ defineProps([
         width: auto;
 
         img{
-          height: auto;
-          max-width: 150px;
+          width: auto;
+          max-height: 100px;
         }
       }
 
@@ -75,6 +75,12 @@ defineProps([
       a.link {
         flex-direction: row;
         gap: 1rem;
+
+        .icon {
+          img{
+            max-height: 100px;
+          }
+        }
       }
     }
   }

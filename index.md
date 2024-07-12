@@ -30,7 +30,7 @@ features:
 ---
 
 <script lang="ts" setup> 
-import { data } from "/.vitepress/scripts/blog.data.ts";
+import { data } from "/.vitepress/scripts/entries_blog.data.ts";
 import ListCard from '/.vitepress/theme/components/pages_list_card.vue';
 const entries_data = [...data].reverse().slice(0, 6);
 const entries_metadata = {
