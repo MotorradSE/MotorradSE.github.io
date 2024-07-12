@@ -50,6 +50,11 @@ defineProps([
         flex: 0 0 120px;
         height: auto; 
         width: auto;
+
+        img{
+          height: auto;
+          max-width: 150px;
+        }
       }
 
       .title {
