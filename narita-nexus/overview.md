@@ -7,8 +7,8 @@ date: 2024/06/10 19:00
 prev: false
 next: false
 ---
-<script setup>
-import Carousel from '/.vitepress/theme/components/Carousel.vue';
+<script lang="ts" setup>
+import Carousel from '/.vitepress/theme/components/el-plus_carousel.vue';
 import { ref } from 'vue';
 
 const slide_carousels = ref ({
@@ -30,6 +30,7 @@ const slide_carousels = ref ({
 ---
 ![2024/03市民大会](/photos/nexus-top.jpg)
 
+---
 # Narita Nexusについて
 
 2022年度より活動しているバスケットボールチームです  

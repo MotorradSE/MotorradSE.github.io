@@ -1,22 +1,25 @@
 <script lang="ts" setup>
-import { data } from "../../scripts/entries.data.ts";
-const entries = [...data].reverse().slice(0, 6);
+defineProps([
+  'list_data',
+]);
 </script>
 
 <template>
   <div class="home-entries-container container">
     <h3 class="entries-title inner">
-      <a href="/entries">Entries</a>
+      <a href="/entries">Latest Entries</a>
     </h3>
 
     <section class="home-entries inner">
-      <a v-for="(entry, index) in entries" :key="index" :href="entry.url">
-        <p v-if="entry.frontmatter.icon" class="icon">
-          <img :src="entry.frontmatter.icon" />
+      <a v-for="(entry, index) in list_data" :key="index" :href="entry.url">
+        <p class="article-title">{{ entry.frontmatter.title }}</p>
+
+        <p v-if="entry.frontmatter.icon" class="icon" >
+          <img :src="entry.frontmatter.icon" width="150px" height="150px" />
         </p>
 
         <p v-else class="icon">
-          <img src="/icons/default.png" />
+          <img src="/icons/default.png" width="150px" height="150px" />
         </p>
 
         <p v-if="entry.frontmatter.date" class="date">
@@ -25,26 +28,11 @@ const entries = [...data].reverse().slice(0, 6);
       </a>
     </section>
   </div>
-
-  <!--
-  // twitterタイムラインの実装予定
-  <div class="footer-container container">
-    <div class="footer-inner inner">
-      <div class="twitter-container">
-        <ClientOnly>
-          <a
-            class="twitter-timeline"
-            href="https://twitter.com/"
-          ></a>
-        </ClientOnly>
-      </div>
-    </div>
-  </div>
-  -->
 </template>
 
 <style lang="scss" scoped>
 .container {
+  padding-top: 100px;
   padding-left: 24px;
   padding-right: 24px;
 
@@ -73,6 +61,7 @@ const entries = [...data].reverse().slice(0, 6);
       padding: 24px;
       height: 100%;
       border-radius: 4px;
+      align-items: center;
 
       &:hover {
         background-color: var(--vp-c-bg-soft-up);
@@ -82,16 +71,6 @@ const entries = [...data].reverse().slice(0, 6);
         flex: 1;
       }
 
-      .emoji {
-        font-size: 64px;
-        line-height: 64px;
-        text-align: center;
-        height: 100px;
-        padding: 20px 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
       .icon {
         //font-size: 64px;
         //line-height: 64px;
@@ -100,30 +79,16 @@ const entries = [...data].reverse().slice(0, 6);
         //padding: 20px 0;
         height: auto;
         width: auto;
-        //display: flex;
+        display: flex;
         align-items: center;
         justify-content: center;
       }
       .date {
         flex: 0 0 auto;
         font-size: 0.8rem;
+        text-align: right;
         align-items: flex-end;
       }
-    }
-  }
-}
-
-.footer-container {
-  margin-top: 3rem;
-  padding: 0 24px;
-
-  .footer-inner {
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr;
-
-    .twitter-container {
-      width: 100%;
     }
   }
 }
@@ -159,10 +124,5 @@ const entries = [...data].reverse().slice(0, 6);
     }
   }
 
-  .footer-container {
-    .footer-inner {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
 }
 </style>
