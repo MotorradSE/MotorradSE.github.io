@@ -1,7 +1,7 @@
 name: github pages deploy
 
 on:
-  branches:
+  pull_request:
     branches:
     - master
     types:
