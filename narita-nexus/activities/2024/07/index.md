@@ -19,4 +19,4 @@ is_list: false
 ---
 
 ## 市民大会について
-[2024/07 市民大会について](../0713_citizen_convention/)を参照
+[2024/07 市民大会について](../0713_citizen_championship/)を参照
