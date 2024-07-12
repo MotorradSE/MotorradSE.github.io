@@ -1,9 +1,11 @@
 name: github pages deploy
 
 on:
-  push:
+  branches:
     branches:
     - master
+    types:
+    - closed
 
 permissions:
   contents: read
@@ -22,6 +24,6 @@ jobs:
     environment:
       name: github-pages
     steps:
-      - name: Deploy github pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+    - name: Deploy github pages
+      id: deployment
+      uses: actions/deploy-pages@v2
