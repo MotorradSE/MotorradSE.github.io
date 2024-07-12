@@ -2,9 +2,9 @@
 import { h, watch } from "vue";
 import Theme from "vitepress/theme";
 import "./style.css";
-import Entry from "./Entry.vue";
-import History from "./History.vue";
-import NaritaNexus_Activity from "./NaritaNexus_Activity.vue";
+import Blog from "./layout_blog.vue";
+import History from "./layout_history.vue";
+import NaritaNexus_Activity from "./layout_nexus_activity.vue";
 import { install } from 'element-plus';
 import 'element-plus/dist/index.css';
 
@@ -16,7 +16,7 @@ export default {
     });
   },
   enhanceApp({ app, router, siteData }) {
-    app.component("entry", Entry);
+    app.component("blog", Blog);
     app.component("history", History);
     app.component("narita-nexus_activities", NaritaNexus_Activity);
     install(app);

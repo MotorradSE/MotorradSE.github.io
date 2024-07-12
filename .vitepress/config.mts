@@ -21,8 +21,8 @@ export default defineConfig({
   ],
   themeConfig: {
     nav: [
-      { text: "Entries", link: "/entries" },
-      { text: "Histories", link: "/histories" },
+      { text: "Blog", link: "/entries/blog" },
+      { text: "Histories", link: "/entries/histories/" },
       { text: "Narita Nexus", link: "/narita-nexus/" },
     ],
 
@@ -42,94 +42,60 @@ export default defineConfig({
       ],
       */
 
-      '/histories.md': generateSidebar({
-        debugPrint: true,
-        documentRootPath: '/',
-        scanStartPath: "/histories/",
-        //resolvePath: "/histories/",
-        manualSortFileNameByPriority: ['overview.md', 'job-carrer'],
-        excludeFiles: ['changelog.md'],
-        collapsed: true,
-        capitalizeFirst: true,
-        useTitleFromFileHeading: true,
-        useTitleFromFrontmatter: true,
-        //useFolderTitleFromIndexFile: true,
-        //useFolderLinkFromIndexFile: true,
-        frontmatterOrderDefaultValue: 9, // For 'CHANGELOG.md'
-        sortMenusByFrontmatterOrder: true
-        //rootGroupText: 'Contents',
-      }),
-
-      '/histories/': generateSidebar({
-        debugPrint: true,
-        documentRootPath: '/',
-        scanStartPath: "/histories/",
-        //resolvePath: "/histories/",
-        manualSortFileNameByPriority: ['overview.md', 'job-carrer'],
-        excludeFiles: ['changelog.md'],
-        collapsed: true,
-        capitalizeFirst: true,
-        useTitleFromFileHeading: true,
-        useTitleFromFrontmatter: true,
-        //useFolderTitleFromIndexFile: true,
-        //useFolderLinkFromIndexFile: true,
-        frontmatterOrderDefaultValue: 9, // For 'CHANGELOG.md'
-        sortMenusByFrontmatterOrder: true
-        //rootGroupText: 'Contents',
-      }),
-
-      '/entries.md': generateSidebar({
-        debugPrint: true,
-        documentRootPath: '/',
-        scanStartPath: "/entries/",
-        //resolvePath: "/entries/",
-        manualSortFileNameByPriority: ['guide', 'advanced-usage'],
-        excludeFiles: ['changelog.md'],
-        collapsed: true,
-        capitalizeFirst: true,
-        useTitleFromFileHeading: true,
-        useTitleFromFrontmatter: true,
-        //useFolderTitleFromIndexFile: true,
-        //useFolderLinkFromIndexFile: true,
-        frontmatterOrderDefaultValue: 9, // For 'CHANGELOG.md'
-        sortMenusByFrontmatterOrder: true
-        //rootGroupText: 'Contents',
-      }),
-
       '/entries/': generateSidebar({
-        debugPrint: true,
+        debugPrint: false,
         documentRootPath: '/',
         scanStartPath: "/entries/",
-        //resolvePath: "/entries/",
+        resolvePath: "/entries/",
         manualSortFileNameByPriority: ['guide', 'advanced-usage'],
         excludeFiles: ['changelog.md'],
-        collapsed: true,
+        collapsed: false,
+        collapseDepth: 3,
         capitalizeFirst: true,
         useTitleFromFileHeading: true,
         useTitleFromFrontmatter: true,
-        //useFolderTitleFromIndexFile: true,
-        //useFolderLinkFromIndexFile: true,
+        useFolderTitleFromIndexFile: true,
+        useFolderLinkFromIndexFile: true,
         frontmatterOrderDefaultValue: 9, // For 'CHANGELOG.md'
-        sortMenusByFrontmatterOrder: true
-        //rootGroupText: 'Contents',
+        sortMenusByName: false,
+        sortMenusByFrontmatterOrder: false,
+        sortMenusByFrontmatterDate: false,
+        sortMenusOrderByDescending: false,
+        sortMenusOrderNumericallyFromTitle: false,
+        sortMenusOrderNumericallyFromLink: false,
+        includeDotFiles: false,
+        includeRootIndexFile: false,
+        includeFolderIndexFile: false,
+        includeEmptyFolder: false,
+        rootGroupText: 'Entries',
       }),
 
       '/narita-nexus/': generateSidebar({
-        debugPrint: true,
+        debugPrint: false,
         documentRootPath: '/',
         scanStartPath: "/narita-nexus/",
-        //resolvePath: "/narita-nexus/",
+        resolvePath: "/narita-nexus/",
         manualSortFileNameByPriority: ['overview.md','guide', 'advanced-usage'],
         excludeFiles: ['activities.md',],
         collapsed: false,
+        collapseDepth: 3,
         capitalizeFirst: true,
         useTitleFromFileHeading: true,
         useTitleFromFrontmatter: true,
-        //useFolderTitleFromIndexFile: true,
-        //useFolderLinkFromIndexFile: true,
+        useFolderTitleFromIndexFile: true,
+        useFolderLinkFromIndexFile: true,
         frontmatterOrderDefaultValue: 9, // For 'CHANGELOG.md'
-        sortMenusByFrontmatterOrder: true
-        //rootGroupText: 'Contents',
+        sortMenusByName: false,
+        sortMenusByFrontmatterOrder: false,
+        sortMenusByFrontmatterDate: false,
+        sortMenusOrderByDescending: false,
+        sortMenusOrderNumericallyFromTitle: false,
+        sortMenusOrderNumericallyFromLink: false,
+        includeDotFiles: false,
+        includeRootIndexFile: false,
+        includeFolderIndexFile: false,
+        includeEmptyFolder: false,
+        rootGroupText: 'Narita Nexus',
       }),
     },
 

@@ -12,15 +12,18 @@ hero:
   actions:
     - theme: brand
       text: "Overview"
-      link: "./overview/"
+      link: "./overview.md"
     - theme: alt
       text: "Activity"
       link: "./activities/"
+    - theme: alt
+      text: "Documents"
+      link: "./docs/"
 
 features:
   - title: "Overview"
     details: "Narita Nexus について"
-    link: "./overview/"
+    link: "./overview.md"
   - title: "Activity"
     details: "Narita Nexusの活動"
     link: "./activities/"
@@ -30,7 +33,13 @@ features:
 ---
 
 <script lang="ts" setup> 
-import NexusHome from "/.vitepress/theme/components/NexusHome.vue";
+import { data } from "/.vitepress/scripts/narita-nexus_activities.data.ts";
+import ListCard from '/.vitepress/theme/components/pages_list_card.vue';
+const docs_data = [...data].reverse().slice(0, 6);
+const docs_metadata = {
+  link: '/narita-nexus/docs/',
+  link_text: 'Documents List',
+};
 </script>
 
-<NexusHome />
+<ListCard :list_data="docs_data" :list_metadata="docs_metadata" />
