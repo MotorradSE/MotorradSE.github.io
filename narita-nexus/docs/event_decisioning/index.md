@@ -15,7 +15,7 @@ import { ref } from 'vue';
 const slide_normal_event = ref ({
   thumb: '/slides/event_decisioning_fy2024/slide_002.jpg',
   list:[
-    '/slides/event_decisioning_fy2024/slide_003.jpg',
+    '/slides/event_decisioning_fy2024/slide_002.jpg',
   ],
 });
 const slide_external_event = ref ({
