@@ -6,6 +6,9 @@ on:
     - master
     types:
     - closed
+    paths-ignore:
+    - 'knowledge/**'
+    - '.gitignore'
 
 permissions:
   contents: read

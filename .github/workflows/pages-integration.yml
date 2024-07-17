@@ -11,8 +11,8 @@ permissions:
   contents: read
 
 jobs:
-  build:
-    name: Build vitepress static content
+  integration:
+    name: Integration vitepress static content
     runs-on: ubuntu-latest    
     steps:
     - name: Checkout source code
