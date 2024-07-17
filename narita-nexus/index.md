@@ -27,9 +27,9 @@ features:
   - title: "Activity"
     details: "Narita Nexusの活動"
     link: "./activities/"
-  - title: "for new member"
-    details: "新規にNexusに参画する方へ"
-    link: "./docs/for_new_member/"
+  - title: "Event decision process"
+    details: "イベント開催までのプロセス"
+    link: "./docs/event_decisioning/"
 ---
 
 <script lang="ts" setup> 
