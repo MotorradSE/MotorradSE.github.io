@@ -8,7 +8,19 @@ prev: false
 next: false
 is_list: false
 ---
+## Result
+### Day1
+#### vs アルバルク
+![](/nexus/2024-07-13/2024-07-13_result_01_nexus-arlvark.jpg)
 
+#### vs 成田北高校
+![](/nexus/2024-07-13/2024-07-13_result_02_nexus-narita_north_hs.jpg)
+
+### Day2
+#### vs 佐倉南OB
+![](/nexus/2024-07-13/2024-07-14_result_03_nexus-sakura_south_ob.jpg)
+
+---
 # 市民大会について
 ## 設営
 大会当日は設営作業があります。  
