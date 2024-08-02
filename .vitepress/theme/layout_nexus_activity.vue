@@ -55,10 +55,10 @@ const next = computed(() =>
           </div>
         </div>
         <div v-if="banner" class="activity-banner">
-          <img :src="banner"  width="740px" height="360px" />
+          <img :src="banner" />
         </div>
         <div v-else class="activity-banner">
-          <img src="/banners/default.jpg"  width="740px" height="360px" />
+          <img src="/banners/default.jpg" />
         </div>
       </div>
     </template>
@@ -127,35 +127,6 @@ const next = computed(() =>
   gap: 3rem;
   margin-bottom: 3rem;
 
-
-  .activity-icon {
-    //width: 100%;
-    //width: 150px;
-    width: auto;
-    //height: 150px;
-    height: auto;
-    object-fit: contain;
-    //display: flex;
-    //flex-direction: column;
-    //line-height: 1;
-    //display: inline-block;
-    align-items: center;
-    justify-content: center;
-  }
-
-  p.activity-banner {
-    //width: 100%;
-    ////width: 150px;
-    width: auto;
-    //height: 360px;
-    height: auto;
-    //object-fit: cover;
-    display: flex;
-    //display: block;
-    align-items: center;
-    justify-content: center;
-  }
-
   .activity-title-date {
     display: flex;
     flex-direction: column;
@@ -170,20 +141,90 @@ const next = computed(() =>
 
     .activity-date-container {
       display: flex;
-      gap: 1rem;
+      gap: 1.2rem;
 
       p.activity-date {
-        font-size: 0.8rem;
+        font-size: 1.0rem;
       }
 
       .prev-next {
         .material-icons {
-          font-size: 0.8rem;
+          font-size: 1.2rem;
         }
       }
     }
   }
+
+  .activity-banner {
+    aspect-ratio: 16 / 9;
+    //width: 100%;
+    ////width: 150px;
+    width: auto;
+    max-width: 100%;
+    //height: 360px;
+    height: auto;
+    //object-fit: cover;
+    display: flex;
+    //display: block;
+    align-items: center;
+    justify-content: center;
+  }
 }
+
+@media (max-width: 640px) {
+  .activity-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 3rem;
+
+
+    .activity-title-date {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      //margin-top: 500px;
+
+      h1.activity-title {
+        font-size: 2.2rem;
+        line-height: 2.2rem;
+        font-weight: bolder;
+      }
+
+      .activity-date-container {
+        display: flex;
+        gap: 1rem;
+
+        p.activity-date {
+          font-size: 1.0rem;
+        }
+
+        .prev-next {
+          .material-icons {
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+
+    .activity-banner {
+      aspect-ratio: 16 / 9;
+      //width: 100%;
+      //width: 640px;
+      max-width: 640px;
+      width: auto;
+      //height: 360px;
+      height: auto;
+      //object-fit: cover;
+      display: flex;
+      //display: block;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
 .footer-buttons-container {
   padding: 2rem 0;
   border-top: 1px solid var(--vp-c-border);
