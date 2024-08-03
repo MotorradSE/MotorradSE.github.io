@@ -110,9 +110,7 @@ const next = computed(() =>
             -->
           </span>
           <i class="material-icons">arrow_forward</i>
-        </a>
-
-        
+        </a>       
       </div>
     </template>
   </VPDoc>
@@ -307,6 +305,64 @@ const next = computed(() =>
     }
   }
 }
+
+@media (max-width: 640px) {
+  .prev-next-container {
+  width: 100%;
+  height: 12rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  
+    a.prev-next {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      background-color: var(--vp-c-bg-soft);
+      border: 1px solid var(--vp-c-border);
+      border-radius: 8px;
+      padding: 1.4rem;
+      height: 100%;
+      font-size: 1.2rem;
+
+      .prev-date{
+        font-size: 0.8rem;
+      }
+
+      &.prev {
+        justify-content: flex-start;
+        text-align: left;
+
+        span {
+          i {
+            margin-right: 0.5rem;
+          }
+        }
+      }
+
+      &.next {
+        justify-content: flex-end;
+        text-align: right;
+
+        span {
+          i {
+            margin-left: 0.5rem;
+          }
+        }
+      }
+
+      i.material-icons {
+        flex: 0 0 auto;
+      }
+
+      span {
+        flex: 1;
+      }
+    }
+  }
+}
+
 .edit-page-link-container {
   padding: 3rem 0;
   text-align: center;
