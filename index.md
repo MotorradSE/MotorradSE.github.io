@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: "My history"
-      link: "/entories/histories/"
+      link: "/entries/histories/"
     - theme: alt
       text: "Blog"
       link: "/entries/blog"
@@ -34,7 +34,7 @@ import { data } from "/.vitepress/scripts/entries_blog.data.ts";
 import ListCard from '/.vitepress/theme/components/pages_list_card.vue';
 const entries_data = [...data].reverse().slice(0, 7);
 const entries_metadata = {
-  link: '/docs/entries/',
+  link: '/entries/blog',
   link_text: 'Latest Entries',
 };
 </script>
