@@ -15,11 +15,12 @@ tags: ["転職"]
   import dayjs from 'dayjs';
   import Timeline from'/.vitepress/theme/components/el-plus_timeline.vue';
   import Card from'/.vitepress/theme/components/el-plus_card.vue';
+  import Carousel from '/.vitepress/theme/components/el-plus_carousel.vue';
 
   const now = new Date();
   const job_timelines = ref ([
     {
-      timestamp: '2018/04/01 ～ 2024/09/30 (予定)',
+      timestamp: '2018/04/01 ～ 2024/09/31',
       is_card: true,
       title: '株式会社DTS',
       contents:[
@@ -37,27 +38,12 @@ tags: ["転職"]
       hollow: false,
     },
     {
-      timestamp: dayjs(now).format('YYYY/MM/DD'),
-      is_card: false,
-      title: 'current',
-      contents:[
-        dayjs(now).format('YYYY/MM/DD') + '現在',
-      ],
-      hide: false,
-      center: true,
-      placement: 'top', // 'top' | 'bottom'(default)
-      type: 'info', // 'primary' | 'success' | 'warning' | 'danger' | 'info'
-      //color: '#0bbd87',
-      size: 'large',
-      //icon: SuccessFilled,
-      hollow: true,
-    },
-    {
-      timestamp: '2024/10/01 (予定) ～',
+      timestamp: '2024/10/01 ～',
       is_card: true,
-      title: 'in private',
+      title: '株式会社Dirbato',
       contents:[
-        '転職',
+        '初転職',
+        'ITコンサルタント',
       ],
       hide: false,
       center: true,
@@ -117,6 +103,43 @@ tags: ["転職"]
       }
     },
   ])
+
+  const slide_carousels = ref ({
+    thumb: '/slides/job_career/slide_001.jpg',
+    list:[
+      '/slides/job_career/slide_001.jpg',
+      '/slides/job_career/slide_002.jpg',
+      '/slides/job_career/slide_003.jpg',
+      '/slides/job_career/slide_004.jpg',
+      '/slides/job_career/slide_005.jpg',
+      '/slides/job_career/slide_006.jpg',
+      '/slides/job_career/slide_007.jpg',
+      '/slides/job_career/slide_008.jpg',
+      '/slides/job_career/slide_009.jpg',
+      '/slides/job_career/slide_010.jpg',
+      '/slides/job_career/slide_011.jpg',
+      '/slides/job_career/slide_012.jpg',
+      '/slides/job_career/slide_013.jpg',
+      '/slides/job_career/slide_014.jpg',
+      '/slides/job_career/slide_015.jpg',
+      '/slides/job_career/slide_016.jpg',
+      '/slides/job_career/slide_017.jpg',
+      '/slides/job_career/slide_018.jpg',
+      '/slides/job_career/slide_019.jpg',
+      '/slides/job_career/slide_020.jpg',
+      '/slides/job_career/slide_021.jpg',
+      '/slides/job_career/slide_022.jpg',
+      '/slides/job_career/slide_023.jpg',
+      '/slides/job_career/slide_024.jpg',
+      '/slides/job_career/slide_025.jpg',
+      '/slides/job_career/slide_026.jpg',
+      '/slides/job_career/slide_027.jpg',
+      '/slides/job_career/slide_028.jpg',
+      '/slides/job_career/slide_029.jpg',
+      '/slides/job_career/slide_030.jpg',
+      '/slides/job_career/slide_031.jpg',
+    ],
+  })
 </script>
 ---
 # Overview
@@ -128,7 +151,11 @@ tags: ["転職"]
 
 ---
 # 職歴
+経歴について
+※クリックするとスライドが表示されます
+<Carousel :carousels="slide_carousels"/>
 
+---
 <Timeline :timelines="job_timelines"/>
 
 ---

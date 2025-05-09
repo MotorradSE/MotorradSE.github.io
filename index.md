@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: "My history"
-      link: "/entries/histories/"
+      link: "/entries/histories/overview.md"
     - theme: alt
       text: "Blog"
       link: "/entries/blog"
@@ -20,7 +20,7 @@ hero:
 features:
   - title: My History
     details: 現在までの経歴
-    link: "/entries/histories/"
+    link: "/entries/histories/overview.md"
   - title: Blog
     details: 雑なブログ
     link: "/entries/blog/"
