@@ -37,8 +37,8 @@ import { data } from "/.vitepress/scripts/narita-nexus_activities.data.ts";
 import ListCard from '/.vitepress/theme/components/pages_list_card.vue';
 const docs_data = [...data].reverse().slice(0, 7);
 const docs_metadata = {
-  link: '/narita-nexus/docs/',
-  link_text: 'Documents List',
+  link: '/narita-nexus/activities/',
+  link_text: 'Activities',
 };
 </script>
 
