@@ -3,7 +3,7 @@ layout: history
 title: Overview
 icon: /icons/neko-pc.png
 banner: /banners/laptop.jpg
-date: 2024/06/10 19:00
+date: 2025/05/11 21:00
 prev: false
 next: false
 is_list: false
@@ -138,6 +138,11 @@ tags: ["転職"]
       '/slides/job_career/slide_029.jpg',
       '/slides/job_career/slide_030.jpg',
       '/slides/job_career/slide_031.jpg',
+      '/slides/job_career/slide_032.jpg',
+      '/slides/job_career/slide_033.jpg',
+      '/slides/job_career/slide_034.jpg',
+      '/slides/job_career/slide_035.jpg',
+      '/slides/job_career/slide_036.jpg',
     ],
   })
 </script>
